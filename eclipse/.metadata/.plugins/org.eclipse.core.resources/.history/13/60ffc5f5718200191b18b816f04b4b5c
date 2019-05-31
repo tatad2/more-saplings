@@ -1,0 +1,29 @@
+package tatad2.moreSpalings;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+
+@Mod(modid = "morespalings", name = "more spalings", version = "1.0", mcversion = "1.7.10")
+public class MoreSpalings
+{
+	@EventHandler 
+	public void preInit(FMLPreInitializationEvent event)
+	{
+		
+	}
+	
+	@EventHandler
+	public void Init(FMLInitializationEvent event) 
+	{
+		
+	}
+	
+	@EventHandler 
+	public void postInit(FMLPostInitializationEvent event) 
+	{
+		
+	}
+}

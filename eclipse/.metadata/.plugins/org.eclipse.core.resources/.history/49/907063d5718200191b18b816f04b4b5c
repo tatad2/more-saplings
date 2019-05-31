@@ -1,0 +1,21 @@
+package tatad2.moreSpalings;
+
+@Mod(modid = "morespalings", name = "more spalings", version = "1.0", mcversion = "1.7.10")
+public class MoreSpalings
+{
+	@eventHandler 
+	public void preInit()
+	{
+		
+	}
+	
+	public void Init() 
+	{
+		
+	}
+	
+	public void postInit() 
+	{
+		
+	}
+}

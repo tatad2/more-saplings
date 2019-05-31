@@ -1,0 +1,54 @@
+package tatad2.moreSpalings;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.terraingen.SaplingGrowTreeEvent;
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+
+@Mod(modid = "morespalings", name = "more spalings", version = "1.0")
+public class MoreSpalings
+{	
+	@EventHandler 
+	public void preInit(FMLPreInitializationEvent event)
+	{
+		
+	}
+	
+	@EventHandler
+	public void Init(FMLInitializationEvent event) 
+	{
+		Block leaves = Block.getBlockById(18); 
+		ArrayList <ItemStack> leavesList = new ArrayList();
+		leaves.getSubBlocks(new ItemBlock(leaves), CreativeTabs.tabDecorations, leavesList);
+		System.out.println(leavesList); 
+
+		Block saplings = Block.getBlockById(6);
+		ArrayList <ItemStack> saplingsList = new ArrayList();
+		saplings.getSubBlocks(new ItemBlock(saplings), CreativeTabs.tabDecorations, saplingsList); 
+		System.out.println(saplingsList);
+
+		for( int i = 0; i <= 3; i ++ ) 
+		{
+			GameRegistry.addShapelessRecipe(saplingsList.get(i), new Object[]{leavesList.get(i)});
+			System.out.println("ok"); 
+		}
+	}
+
+	@EventHandler 
+	public void postInit(FMLPostInitializationEvent event) 
+	{
+		
+	}
+}
